@@ -4,7 +4,9 @@ import viteLogo from '/vite.svg'
 import { auth } from './firebase/firebaseConfig'
 import './App.css'
 
-console.log("Firebase Auth", auth)
+if (process.env.NODE_ENV === 'development') {
+  console.log("Firebase Auth", auth);
+}
 
 function App() {
   const [count, setCount] = useState(0)
