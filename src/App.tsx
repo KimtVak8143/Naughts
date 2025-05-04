@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { auth } from './firebase/firebaseConfig'
 import './App.css'
+
+console.log("Firebase Auth", auth)
 
 function App() {
   const [count, setCount] = useState(0)

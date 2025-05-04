@@ -1,0 +1,29 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+//   apiKey: "AIzaSyBvXI2qVIdFUd4YGW7VDTlYL40nHS9PLL8",
+//   authDomain: "naughts-3e7ac.firebaseapp.com",
+//   projectId: "naughts-3e7ac",
+//   storageBucket: "naughts-3e7ac.firebasestorage.app",
+//   messagingSenderId: "289332112889",
+//   appId: "1:289332112889:web:58a4fdd3e6246e4ea22128",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// console.log("APi KEY", import.meta.env.VITE_FIREBASE_API_KEY)
+// console.log("Auth Domain", import.meta.env.VITE_FIREBASE_AUTH_DOMAIN)
+export const auth = getAuth(app);
+export const db = getFirestore(app);
