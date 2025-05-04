@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Login } from './auth/Login';
 import { Signup } from './auth/Signup';
+import { Logout } from './auth/Logout';
 import { Notes } from './pages/Notes';
 import { ProtectedRoute } from './auth/ProtectedRoute';
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         {/* Public Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/logout" element={<Logout />} />
 
         {/* Protected Routes */}
         <Route 
